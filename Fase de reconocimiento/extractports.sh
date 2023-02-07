@@ -9,6 +9,6 @@ function extractPorts()
     echo -e "\t[*] Open ports: $ports\n" >> extractPorts.tmp
     echo $ports | tr -d '\n' | xclip -sel clip
     echo -e "[*] Ports copied to clipboard\n" >> extractPorts.tmp
-    /bin/bat extractPorts.tmp
+    /bin/batcat extractPorts.tmp
     rm extractPorts.tmp
 }
