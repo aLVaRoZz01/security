@@ -72,6 +72,11 @@ Para descubrir posibles rutas dentro de la aplicación web podemos utilizar:
 nmap --script http-enum -p<p> <ipV> -oN webScan
 ```
 
+Para descubrir subdominios dentr de la aplicación web podemos utilizar:
+```bash
+wfuzz -c --hc404 -t 200 -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-11000.txt -H "Host: FUZZ.<domain>" http://<domain>
+```
+
 # SploitDB
 Para buscar un sploit:
 
